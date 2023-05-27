@@ -1,5 +1,6 @@
 import { users } from './db.js';
 import { AUTH_KEY, STORAGE_KEY } from './constants.js';
+import { deleteUser } from './events.js';
 
 export function saveData() {
 	if (isStorageExist()) {
@@ -84,20 +85,7 @@ export function displayUserToTable(users) {
 		btnDelete.classList.add('btn', 'btn-danger');
 
 		btnDelete.addEventListener('click', function () {
-			if (!confirm('Are you sure want to delete the data?')) {
-				return;
-			}
-
-			const userTarget = findUserIndex(user.id);
-
-			if (userTarget === -1) return;
-
-			users.splice(userTarget, 1);
-			saveData();
-
-			alert('Success deleting data!');
-
-			location.reload();
+      deleteUser(user.id)
 		});
 
 		const auth = getLocalStorage(AUTH_KEY);

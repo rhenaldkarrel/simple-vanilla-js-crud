@@ -47,3 +47,20 @@ export function editUser(userId) {
 
 	alert('Success updating data!');
 }
+
+export function deleteUser(userId) {
+  if (!confirm('Are you sure want to delete the data?')) {
+    return;
+  }
+
+  const userTarget = findUserIndex(userId);
+
+  if (userTarget === -1) return;
+
+  users.splice(userTarget, 1);
+  saveData();
+
+  alert('Success deleting data!');
+
+  location.reload();
+}
