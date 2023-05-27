@@ -1,12 +1,19 @@
 import { STORAGE_KEY } from './constants.js';
-import { getLocalStorage } from './utils.js';
+import { getLocalStorage, setLocalStorage } from './utils.js';
 
-export const users = getLocalStorage(STORAGE_KEY) ?? [
-	{
-		fullname: 'Admin',
-		email: 'admin@gmail.com',
-		password: '123',
-		age: 0,
-		company: '-',
-	},
-];
+const admin = {
+  id: Date.now(),
+  fullname: 'Admin',
+  email: 'admin@gmail.com',
+  password: '123',
+  age: 0,
+  company: '-',
+};
+
+const storedData = getLocalStorage(STORAGE_KEY)
+
+export const users = storedData ?? [admin];
+
+if (!storedData) {
+  setLocalStorage(STORAGE_KEY, users)
+}
