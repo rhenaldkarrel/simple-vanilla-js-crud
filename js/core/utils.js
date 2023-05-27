@@ -60,7 +60,7 @@ export function displayUserToTable(users) {
 		tdEmail.textContent = user.email;
 
 		const tdBirthday = document.createElement('td');
-		tdBirthday.textContent = user.birthday;
+		tdBirthday.textContent = new Date(user.birthday).toLocaleDateString();
 
 		const tdAge = document.createElement('td');
 		tdAge.textContent = user.age;
