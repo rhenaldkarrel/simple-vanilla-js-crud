@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./style/global.css">
+</head>
+
+<body>
+  <header class="header"></header>
+
+  <main class="main">
+    <aside class="sidebar"></aside>
+
+    <div class="main-content">
+      <form class="form add-user-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" placeholder="Full Name" id="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" placeholder="Age" id="age" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" placeholder="Company" id="company" required>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary" title="Submit Button"></button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Made by Rhenald Karrel</p>
+  </footer>
+
+  <script src="./js/pages/form.js" type="module"></script>
+</body>
+
+</html>
