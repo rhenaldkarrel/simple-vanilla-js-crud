@@ -4,7 +4,7 @@ import {
 	getLocalStorage,
 	loadTemplate,
 	prefillForm,
-	redirectTo,
+	navigate,
 	setPageTitle,
 } from '../core/utils.js';
 
@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			editUser(userId);
 		}
 
-		redirectTo('/index.html');
+		navigate('/index.html');
 	});
 });

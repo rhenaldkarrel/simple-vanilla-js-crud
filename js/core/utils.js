@@ -43,7 +43,7 @@ export function setPageTitle(title) {
 	document.title = title;
 }
 
-export function redirectTo(path) {
+export function navigate(path) {
 	window.location.href = '' + path;
 }
 
@@ -76,7 +76,7 @@ export function displayUserToTable(users) {
 		btnEdit.classList.add('btn', 'btn-edit');
 
 		btnEdit.addEventListener('click', function () {
-			redirectTo('/form.html?id=' + user.id);
+			navigate('/form.html?id=' + user.id);
 		});
 
 		const btnDelete = document.createElement('button');

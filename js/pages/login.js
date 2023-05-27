@@ -1,6 +1,6 @@
 import { AUTH_KEY } from '../core/constants.js';
 import { users } from '../core/db.js';
-import { redirectTo, setLocalStorage } from '../core/utils.js';
+import { navigate, setLocalStorage } from '../core/utils.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 	const btnLogin = document.querySelector('div.button');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (user.password === password) {
 			setLocalStorage(AUTH_KEY, { email });
 			alert('Login success!');
-			redirectTo('/index.html');
+			navigate('/index.html');
 		}
 	});
 });
