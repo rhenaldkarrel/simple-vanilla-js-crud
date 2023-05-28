@@ -3,9 +3,11 @@ import { users } from '../core/db.js';
 import { navigate, setLocalStorage } from '../core/utils.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-	const btnLogin = document.querySelector('div.button');
+	const loginForm = document.querySelector('form.login-form');
 
-	btnLogin.addEventListener('click', function () {
+	loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
 		const email = document.getElementById('email').value;
 		const password = document.getElementById('password').value;
 
