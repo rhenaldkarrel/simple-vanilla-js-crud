@@ -27,7 +27,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgb(14, 44, 78),rgb(26, 136, 99));
+  background-color: var(--clr-primary);
 }
 .form-content {
   width: var(--form-content-width);
@@ -86,50 +86,14 @@ span {
   background-color: #fff;
 }
 
-.form-content .button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--input-width);
-  height: var(--input-height);
-  border-radius: var(--input-border-radius);
-  margin-top: var(--margin-medium);
-  color: #f8faec;
-  font-size: var(--input-font-szie);
-  background: var(--clr-primary);
-  box-shadow: 0px 3px 20px rgba(26, 136, 99,0.5),
-              0px 2px 3px rgba(170, 245, 199, 0.76) inset;
-  cursor: pointer;
-  overflow: hidden;
-  transition: .3s;
+.btn {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
 }
-.button-ball {
-  z-index: 3;
-  position: absolute;
-  top:40px;
-  left:50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 300px;
-  background-color: rgb(59, 189, 145);
-  border-radius: 50%;
-  transition: 1s ease;
-}
-.button:hover .button-ball {
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-.button:active {
-  transform: translate(2px,2px);
-}
-.bubble {
-  z-index: 999;
-  position: absolute;
-  width: var(--bubble-size);
-  height: var(--bubble-size);
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0 0 10px rgba(255,255,255,0.5); 
-  transition: 1s ease-in-out;
+
+.btn-primary {
+	color: white;
+	background-color: var(--clr-primary);
 }
