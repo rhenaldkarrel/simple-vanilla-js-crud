@@ -127,6 +127,7 @@ export function prefillForm(userId) {
 
 	fullname.value = userData.fullname;
 	email.value = userData.email;
+	password.value = userData.password;
 	birthday.value = userData.birthday;
 	age.value = userData.age;
 	company.value = userData.company;
